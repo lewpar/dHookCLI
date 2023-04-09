@@ -1,8 +1,7 @@
 {
   "profiles": {
     "dHookCLI": {
-      "commandName": "Project",
-      "commandLineArgs": "-Url \"https://example.net/endpoint\" -Json \"Hello, World!\""
+      "commandName": "Project"
     }
   }
 }
