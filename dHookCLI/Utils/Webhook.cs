@@ -12,7 +12,7 @@ namespace dHookCLI.Utils
     {
         private static HttpClient _httpClient;
 
-        public static void Send(WebhookArguments wArgs)
+        public static HttpResponseMessage Send(WebhookArguments wArgs)
         {
             if(_httpClient == null)
             {
@@ -48,7 +48,7 @@ namespace dHookCLI.Utils
                 message.Content = new StringContent(sb.ToString(), Encoding.UTF8, "application/json");
             }
 
-            _httpClient.Send(message);
+            return _httpClient.Send(message);
         }
     }
 }
