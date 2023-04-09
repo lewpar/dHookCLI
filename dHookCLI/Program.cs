@@ -27,7 +27,7 @@ namespace dHookCLI
                 return;
             }
 
-            Console.WriteLine($"Sending POST request to '{wArgs.Url}'..");
+            Console.WriteLine("Sending POST request..");
             var result = Webhook.Send(wArgs);
 
             if (!result.IsSuccessStatusCode)
