@@ -13,7 +13,7 @@ namespace dHookCLI
                 return;
             }
 
-            WebhookArguments wArgs = ParseArguments(args);
+            WebhookArguments wArgs = ParseArguments(args); 
 
             Console.ReadLine();
         }
@@ -35,6 +35,12 @@ namespace dHookCLI
             if (ArgumentParser.TryFind(args, "-Body", out Argument argBody))
             {
                 wArgs.Body = argBody.Value;
+            }
+
+            if(ArgumentParser.TryFind(args, "-Json", out Argument argJson))
+            {
+                wArgs.Json = argJson.Value;
+                wArgs.IsRaw = true;
             }
 
             return wArgs;
