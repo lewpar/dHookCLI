@@ -34,6 +34,9 @@ namespace dHookCLI
             {
                 Console.WriteLine("POST request failed with response:");
                 Console.WriteLine(result.ToString());
+
+                Console.WriteLine("WebhookArguments:");
+                Console.WriteLine(wArgs.ToString());
             }
 
             Console.ReadLine();
