@@ -27,6 +27,7 @@ namespace dHookCLI
                 return;
             }
 
+            Console.WriteLine($"Sending POST request to '{wArgs.Url}'..");
             Webhook.Send(wArgs);
 
             Console.ReadLine();
