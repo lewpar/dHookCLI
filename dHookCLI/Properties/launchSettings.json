@@ -1,8 +1,7 @@
 {
   "profiles": {
     "dHookCLI": {
-      "commandName": "Project",
-      "commandLineArgs": "-Header \"Hello World!\" -Body \"Test 123\""
+      "commandName": "Project"
     }
   }
 }

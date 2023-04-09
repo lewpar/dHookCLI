@@ -15,6 +15,18 @@ namespace dHookCLI
 
             WebhookArguments wArgs = ParseArguments(args); 
 
+            if(string.IsNullOrEmpty(wArgs.Url))
+            {
+                Console.WriteLine("You must supply a webhook url.");
+                return;
+            }
+
+            if(!Uri.IsWellFormedUriString(wArgs.Url, UriKind.Absolute))
+            {
+                Console.WriteLine("Invalid url format.");
+                return;
+            }
+
             Console.ReadLine();
         }
 
