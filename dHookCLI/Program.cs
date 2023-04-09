@@ -9,7 +9,12 @@ namespace dHookCLI
         {
             var wArgs = new WebhookArguments();
 
-            if(ArgumentParser.TryFind(args, "-Header", out Argument argHeader))
+            if (ArgumentParser.TryFind(args, "-Url", out Argument argUrl))
+            {
+                wArgs.Url = argUrl.Value;
+            }
+
+            if (ArgumentParser.TryFind(args, "-Header", out Argument argHeader))
             {
                 wArgs.Header = argHeader.Value;
             }
