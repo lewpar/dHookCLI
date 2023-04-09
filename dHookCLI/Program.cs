@@ -7,6 +7,19 @@ namespace dHookCLI
     {
         static void Main(string[] args)
         {
+            if(args.Length == 0)
+            {
+                Console.WriteLine("Invalid arguments, you must have at least one argument.");
+                return;
+            }
+
+            WebhookArguments wArgs = ParseArguments(args);
+
+            Console.ReadLine();
+        }
+
+        static WebhookArguments ParseArguments(string[] args)
+        {
             var wArgs = new WebhookArguments();
 
             if (ArgumentParser.TryFind(args, "-Url", out Argument argUrl))
@@ -24,7 +37,7 @@ namespace dHookCLI
                 wArgs.Body = argBody.Value;
             }
 
-            Console.ReadLine();
+            return wArgs;
         }
     }
 }
