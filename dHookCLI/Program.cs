@@ -27,6 +27,8 @@ namespace dHookCLI
                 return;
             }
 
+            Webhook.Send(wArgs);
+
             Console.ReadLine();
         }
 

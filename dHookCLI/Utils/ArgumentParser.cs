@@ -16,10 +16,14 @@ namespace dHookCLI.Utils
             {
                 for (int i = 0; i < args.Length; i++)
                 {
-                    if (args[i] == name)
+                    string arg = args[i];
+
+                    if (arg == name)
                     {
                         argument.Name = args[i];
                         argument.Value = args[i+1];
+
+                        return true;
                     }
                 }
             }
@@ -28,7 +32,7 @@ namespace dHookCLI.Utils
                 return false;
             }
 
-            return true;
+            return false;
         }
     }
 }
