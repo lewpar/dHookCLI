@@ -42,6 +42,11 @@ namespace dHookCLI
                 wArgs.Url = argUrl.Value;
             }
 
+            if (ArgumentParser.TryFind(args, "-Name", out Argument argName))
+            {
+                wArgs.Name = argName.Value;
+            }
+
             if (ArgumentParser.TryFind(args, "-Header", out Argument argHeader))
             {
                 wArgs.Header = argHeader.Value;

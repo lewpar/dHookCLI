@@ -31,9 +31,16 @@ namespace dHookCLI.Utils
 
                 sb.Append("{");
 
-                if(!string.IsNullOrEmpty(wArgs.Body))
+                if (!string.IsNullOrEmpty(wArgs.Name))
                 {
                     sb.Append($"\"content\": \"{wArgs.Body}\"");
+                }
+
+                sb.Append(",");
+
+                if (!string.IsNullOrEmpty(wArgs.Body))
+                {
+                    sb.Append($"\"username\": \"{wArgs.Name}\"");
                 }
 
                 sb.Append("}");
